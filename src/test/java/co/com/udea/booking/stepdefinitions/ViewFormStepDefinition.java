@@ -48,4 +48,5 @@ public class ViewFormStepDefinition {
     public void puedoVerElFormulario(){
         GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationViewForm.titleForm(), Matchers.containsString(Constants.TITLE_FORM)));
     }
+
 }
