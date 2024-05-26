@@ -15,6 +15,11 @@ public class BookingPage extends PageObject {
             .the("Boton para enviar el formulario")
             .locatedBy("//*[@id=\"btn-con\"]");
 
+    //Mensaje de error
+    public static final Target MSJ_EMPTY_DATA = Target
+            .the("Mensaje de error por datos vacios")
+            .locatedBy("//*[@id=\"pinfo-dialog-message\"]");
+
     //Inputs passenger 1
     public static final Target INPUT_NAME_P1 = Target
             .the("Input para el nombre del pasajero")

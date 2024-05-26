@@ -4,11 +4,11 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
 
-public class OpenThe implements Task {
+public class OpenUrl implements Task {
 
     private final String URL;
 
-    public OpenThe(String url) {
+    public OpenUrl(String url) {
         this.URL = url;
     }
 
@@ -17,7 +17,7 @@ public class OpenThe implements Task {
          actor.attemptsTo(Open.url(URL));
     }
 
-    public static OpenThe url(String url){
-         return new OpenThe(url);
+    public static OpenUrl url(String url){
+         return new OpenUrl(url);
     }
 }

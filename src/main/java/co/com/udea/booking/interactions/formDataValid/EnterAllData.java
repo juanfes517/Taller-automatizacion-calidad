@@ -1,4 +1,4 @@
-package co.com.udea.booking.interactions.formDataCorrectly;
+package co.com.udea.booking.interactions.formDataValid;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

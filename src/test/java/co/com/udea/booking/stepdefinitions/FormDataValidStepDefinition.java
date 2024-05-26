@@ -1,9 +1,9 @@
 package co.com.udea.booking.stepdefinitions;
 
-import co.com.udea.booking.tasks.viewForm.ClickOn;
+import co.com.udea.booking.questions.ValidationFormDataValid;
+import co.com.udea.booking.tasks.formDataValid.FillAllFormData;
 import co.com.udea.booking.tasks.OpenUrl;
 import co.com.udea.booking.utils.Constants;
-import co.com.udea.booking.questions.ValidationViewForm;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,8 +18,7 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
-public class ViewFormStepDefinition {
-
+public class FormDataValidStepDefinition {
     //Actor
     private final Actor usuario = Actor.named("usuario");
 
@@ -34,19 +33,18 @@ public class ViewFormStepDefinition {
         setTheStage(new OnlineCast());
     }
 
-    @Given("un usuario que se encuentra en la pagina de inicio del modulo de reservas")
+    @Given("un usuario que se encuentra en el formulario de reservas")
     public void estoyEnElSitio(){
-        usuario.attemptsTo(OpenUrl.url(Constants.URL_HOME));
+        usuario.attemptsTo(OpenUrl.url(Constants.URL_BOOKING));
     }
 
-    @When("presione el boton relizar reserva")
-    public void clickEnReservar(){
-        usuario.attemptsTo(ClickOn.button());
+    @When("ingresa todos los datos requeridos")
+    public void ingresarDatos(){
+        usuario.attemptsTo(FillAllFormData.inputs());
     }
 
-    @Then("puede visualizar un formulario con todos los datos requeridos.")
-    public void puedoVerElFormulario(){
-        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationViewForm.titleForm(), Matchers.containsString(Constants.TITLE_FORM)));
+    @Then("puede visualizar una ventana de confirmacion")
+    public void puedoVerConfirmacion(){
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationFormDataValid.titleConfirm(), Matchers.containsString(Constants.TITLE_CONFIRM)));
     }
-
 }

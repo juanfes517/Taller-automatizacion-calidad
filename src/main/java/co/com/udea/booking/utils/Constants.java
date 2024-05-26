@@ -6,4 +6,6 @@ public class Constants {
 
     public static final String TITLE_FORM = "Ingresar informacion del pasajero";
     public static final String TITLE_CONFIRM = "Confirmar Datos";
+
+    public static final String ERROR_EMPTY_DATA = "Por favor, complete todos los campos antes de continuar.";
 }

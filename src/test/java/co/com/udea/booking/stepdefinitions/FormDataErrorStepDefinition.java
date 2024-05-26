@@ -1,8 +1,8 @@
 package co.com.udea.booking.stepdefinitions;
 
-import co.com.udea.booking.questions.ValidationFormDataCorrectly;
-import co.com.udea.booking.tasks.formDataCorrectly.WriteOn;
-import co.com.udea.booking.tasks.OpenThe;
+import co.com.udea.booking.questions.ValidationFormDataError;
+import co.com.udea.booking.tasks.OpenUrl;
+import co.com.udea.booking.tasks.formDataError.FillPartialFormData;
 import co.com.udea.booking.utils.Constants;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -18,7 +18,7 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
-public class FormDataCorrectlyStepDefinition {
+public class FormDataErrorStepDefinition {
     //Actor
     private final Actor usuario = Actor.named("usuario");
 
@@ -33,18 +33,18 @@ public class FormDataCorrectlyStepDefinition {
         setTheStage(new OnlineCast());
     }
 
-    @Given("un usuario que se encuentra en el formulario de reservas")
-    public void estoyEnElSitio(){
-        usuario.attemptsTo(OpenThe.url(Constants.URL_BOOKING));
+    @Given("un usuario del sistema que se encuentra en el formulario de reservas")
+    public void estoyEnElSitio() {
+        usuario.attemptsTo(OpenUrl.url(Constants.URL_BOOKING));
     }
 
-    @When("ingresa todos los datos requeridos")
-    public void ingresarDatos(){
-        usuario.attemptsTo(WriteOn.inputs());
+    @When("ingresa todos los datos requeridos de forma incorrecta")
+    public void ingresarDatos() {
+        usuario.attemptsTo(FillPartialFormData.inputs());
     }
 
-    @Then("puede visualizar una ventana de confirmacion")
-    public void puedoVerElFormulario(){
-        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationFormDataCorrectly.titleConfirm(), Matchers.containsString(Constants.TITLE_CONFIRM)));
+    @Then("puede visualizar un mensaje de error")
+    public void mensajeDeError(){
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationFormDataError.errorMessage(), Matchers.containsString(Constants.ERROR_EMPTY_DATA)));
     }
 }
