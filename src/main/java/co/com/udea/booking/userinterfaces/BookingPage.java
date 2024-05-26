@@ -5,22 +5,26 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class BookingPage extends PageObject {
 
-    //Title
     public static final Target FORM_TITLE = Target
             .the("Titulo del formulario")
             .locatedBy("/html/body/div/div/div[1]/p");
 
-    //Button continue
     public static final Target BUTTON_SUBMIT = Target
             .the("Boton para enviar el formulario")
             .locatedBy("//*[@id=\"btn-con\"]");
 
-    //Mensaje de error
     public static final Target MSJ_EMPTY_DATA = Target
             .the("Mensaje de error por datos vacios")
             .locatedBy("//*[@id=\"pinfo-dialog-message\"]");
 
-    //Inputs passenger 1
+    public static final Target BUTTON_NEW_PASSENGER = Target
+            .the("Boton para agregar un nuevo pasajero")
+            .locatedBy("/html/body/div/div/button");
+
+    public static final Target TITLE_NEW_PASSENGER = Target
+            .the("Titulo de un nuevo pasajero")
+            .locatedBy("/html/body/div/div/div[2]/div/div[2]/div[1]/div/span");
+
     public static final Target INPUT_NAME_P1 = Target
             .the("Input para el nombre del pasajero")
             .locatedBy("/html/body/div/div/div[2]/div/div[1]/div/div[1]/div[1]/div/input");

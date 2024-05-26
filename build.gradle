@@ -1,6 +1,5 @@
 buildscript {
     repositories {
-
         mavenCentral()
         google()
     }
@@ -13,7 +12,7 @@ plugins {
     id 'idea'
 }
 
-group 'co.com.udea.certificacion.autenticacion'
+group 'co.com.udea.booking'
 
 sourceCompatibility = 11
 
@@ -42,13 +41,7 @@ dependencies {
     //Test compilation
     testImplementation "junit:junit:$rootProject.ext.junit"
     testImplementation "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrest"
-
-
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
-
-
-
     testImplementation group: 'io.cucumber', name: 'cucumber-java', version: '7.15.0'
     testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.15.0'
-
 }

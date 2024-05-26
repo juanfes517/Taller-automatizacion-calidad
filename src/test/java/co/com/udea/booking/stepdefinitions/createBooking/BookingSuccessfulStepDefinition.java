@@ -1,7 +1,6 @@
-package co.com.udea.booking.stepdefinitions;
+package co.com.udea.booking.stepdefinitions.createBooking;
 
 import co.com.udea.booking.questions.ValidationBookingSuccessful;
-import co.com.udea.booking.questions.ValidationFormDataError;
 import co.com.udea.booking.tasks.OpenUrl;
 import co.com.udea.booking.tasks.bookingSuccessful.ClickConfirm;
 import co.com.udea.booking.tasks.formDataValid.FillAllFormData;

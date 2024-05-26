@@ -1,8 +1,9 @@
-package co.com.udea.booking.stepdefinitions;
+package co.com.udea.booking.stepdefinitions.addPassenger;
 
-import co.com.udea.booking.questions.ValidationFormDataError;
+import co.com.udea.booking.questions.ValidationViewForm;
+import co.com.udea.booking.questions.ValidationViewNewPassenger;
 import co.com.udea.booking.tasks.OpenUrl;
-import co.com.udea.booking.tasks.formDataError.FillPartialFormData;
+import co.com.udea.booking.tasks.viewNewPassenger.ClickNewPassenger;
 import co.com.udea.booking.utils.Constants;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -18,7 +19,8 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
-public class FormDataErrorStepDefinition {
+public class ViewNewPassengerStepDefinition {
+
     //Actor
     private final Actor usuario = Actor.named("usuario");
 
@@ -33,18 +35,18 @@ public class FormDataErrorStepDefinition {
         setTheStage(new OnlineCast());
     }
 
-    @Given("un usuario del sistema que se encuentra en el formulario de reservas")
-    public void estoyEnElSitio() {
+    @Given("un usuario que esta en el formulario de reservas")
+    public void estoyEnElSitio(){
         usuario.attemptsTo(OpenUrl.url(Constants.URL_BOOKING));
     }
 
-    @When("ingresa todos los datos requeridos de forma incorrecta")
-    public void ingresarDatos() {
-        usuario.attemptsTo(FillPartialFormData.inputs());
+    @When("presione el boton agregar un pasajero")
+    public void clickEnReservar(){
+        usuario.attemptsTo(ClickNewPassenger.newPassenger());
     }
 
-    @Then("puede visualizar un mensaje de error")
-    public void mensajeDeError(){
-        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationFormDataError.errorMessage(), Matchers.containsString(Constants.ERROR_EMPTY_DATA)));
+    @Then("puede ver un formulario para el nuevo pasajero")
+    public void puedoVerElFormulario(){
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationViewNewPassenger.titleNewPassenger(), Matchers.containsString(Constants.TITLE_NEW_PASSENGER)));
     }
 }

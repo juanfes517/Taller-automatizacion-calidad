@@ -1,4 +1,4 @@
-package co.com.udea.booking.stepdefinitions;
+package co.com.udea.booking.stepdefinitions.createBooking;
 
 import co.com.udea.booking.questions.ValidationFormDataValid;
 import co.com.udea.booking.tasks.formDataValid.FillAllFormData;

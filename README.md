@@ -1,1 +1,3 @@
-.\gradlew clean build
+Para ejecutar las pruebas:  
+`.\gradlew clean build`
+

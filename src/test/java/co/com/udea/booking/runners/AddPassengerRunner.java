@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/Crear_una_reserva.feature",
-        glue = "co.com.udea.booking.stepdefinitions.createBooking",
+        features = "src/test/resources/features/Agregar_pasajero.feature",
+        glue = "co.com.udea.booking.stepdefinitions.addPassenger",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
-public class CreateBookingRunner {
+public class AddPassengerRunner {
 }

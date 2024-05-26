@@ -1,9 +1,9 @@
-package co.com.udea.booking.stepdefinitions;
+package co.com.udea.booking.stepdefinitions.createBooking;
 
-import co.com.udea.booking.tasks.viewForm.ClickForm;
+import co.com.udea.booking.questions.ValidationFormDataError;
 import co.com.udea.booking.tasks.OpenUrl;
+import co.com.udea.booking.tasks.formDataError.FillPartialFormData;
 import co.com.udea.booking.utils.Constants;
-import co.com.udea.booking.questions.ValidationViewForm;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,8 +18,7 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
-public class ViewFormStepDefinition {
-
+public class FormDataErrorStepDefinition {
     //Actor
     private final Actor usuario = Actor.named("usuario");
 
@@ -34,19 +33,18 @@ public class ViewFormStepDefinition {
         setTheStage(new OnlineCast());
     }
 
-    @Given("un usuario que se encuentra en la pagina de inicio del modulo de reservas")
-    public void estoyEnElSitio(){
-        usuario.attemptsTo(OpenUrl.url(Constants.URL_HOME));
+    @Given("un usuario del sistema que se encuentra en el formulario de reservas")
+    public void estoyEnElSitio() {
+        usuario.attemptsTo(OpenUrl.url(Constants.URL_BOOKING));
     }
 
-    @When("presione el boton relizar reserva")
-    public void clickEnReservar(){
-        usuario.attemptsTo(ClickForm.button());
+    @When("ingresa todos los datos requeridos de forma incorrecta")
+    public void ingresarDatos() {
+        usuario.attemptsTo(FillPartialFormData.inputs());
     }
 
-    @Then("puede visualizar un formulario con todos los datos requeridos.")
-    public void puedoVerElFormulario(){
-        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationViewForm.titleForm(), Matchers.containsString(Constants.TITLE_FORM)));
+    @Then("puede visualizar un mensaje de error")
+    public void mensajeDeError(){
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationFormDataError.errorMessage(), Matchers.containsString(Constants.ERROR_EMPTY_DATA)));
     }
-
 }
