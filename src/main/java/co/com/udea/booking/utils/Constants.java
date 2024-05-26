@@ -10,5 +10,6 @@ public class Constants {
 
     public static final String ERROR_EMPTY_DATA = "Por favor, complete todos los campos antes de continuar.";
     public static final String MSJ_SUCCESSFUL = "Se ha registrado con exito la reserva.";
+    public static final String MSJ_NO_CONTACT = "No olvide completar los datos de contacto del contacto de emergencia.";
 
 }

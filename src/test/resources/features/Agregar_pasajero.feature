@@ -5,5 +5,10 @@ Feature: Agregar pasajero.
 
   Scenario: ver nuevo pasajero
     Given un usuario que esta en el formulario de reservas
-    When presione el boton agregar un pasajero
+    When agregue un nuevo pasajero
     Then puede ver un formulario para el nuevo pasajero
+
+  Scenario: Ningun pasajero tiene contacto de emergencia
+    Given un usuario que se encuentra en el formulario de reserva
+    When solo agregue la informacion basica de dos o mas pasajeros
+    Then puede ver un mensaje de error pidiendo la informacion de contacto

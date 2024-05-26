@@ -1,9 +1,9 @@
 package co.com.udea.booking.stepdefinitions.addPassenger;
 
-import co.com.udea.booking.questions.ValidationViewForm;
+import co.com.udea.booking.questions.ValidationNoEmergencyContact;
 import co.com.udea.booking.questions.ValidationViewNewPassenger;
 import co.com.udea.booking.tasks.OpenUrl;
-import co.com.udea.booking.tasks.viewNewPassenger.ClickNewPassenger;
+import co.com.udea.booking.tasks.noEmergencyContact.FillBasicInfo;
 import co.com.udea.booking.utils.Constants;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -19,8 +19,7 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
-public class ViewNewPassengerStepDefinition {
-
+public class NoEmergencyContactStepDefinition {
     //Actor
     private final Actor usuario = Actor.named("usuario");
 
@@ -35,18 +34,18 @@ public class ViewNewPassengerStepDefinition {
         setTheStage(new OnlineCast());
     }
 
-    @Given("un usuario que esta en el formulario de reservas")
+    @Given("un usuario que se encuentra en el formulario de reserva")
     public void estoyEnElSitio(){
         usuario.attemptsTo(OpenUrl.url(Constants.URL_BOOKING));
     }
 
-    @When("agregue un nuevo pasajero")
-    public void clickEnReservar(){
-        usuario.attemptsTo(ClickNewPassenger.newPassenger());
+    @When("solo agregue la informacion basica de dos o mas pasajeros")
+    public void aguegarInformacion(){
+        usuario.attemptsTo(FillBasicInfo.inputs());
     }
 
-    @Then("puede ver un formulario para el nuevo pasajero")
-    public void puedoVerElFormulario(){
-        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationViewNewPassenger.titleNewPassenger(), Matchers.containsString(Constants.TITLE_NEW_PASSENGER)));
+    @Then("puede ver un mensaje de error pidiendo la informacion de contacto")
+    public void puedoVerMensajeError(){
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationNoEmergencyContact.noContact(), Matchers.containsString(Constants.MSJ_NO_CONTACT)));
     }
 }
