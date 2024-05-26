@@ -17,3 +17,10 @@ Feature: Crear una reserva.
     Given un usuario del sistema que se encuentra en el formulario de reservas
     When ingresa todos los datos requeridos de forma incorrecta
     Then puede visualizar un mensaje de error
+
+  Scenario: El usuario puede crear una reserva exitosamente
+    Given un usuario que se encuentra en la pagina de inicio
+    When ingrese al formulario para realizar un reserva
+    And llene todos los campos requeridos
+    And confirme su reserva
+    Then puede ver un mensaje de exito

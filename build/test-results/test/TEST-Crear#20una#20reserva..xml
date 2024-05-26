@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Crear una reserva." tests="3" skipped="0" failures="0" errors="0" timestamp="2024-05-26T17:00:44" hostname="DESKTOP-MQRS415" time="12.847">
+<testsuite name="Crear una reserva." tests="4" skipped="0" failures="0" errors="0" timestamp="2024-05-26T18:49:04" hostname="DESKTOP-MQRS415" time="18.73">
   <properties/>
-  <testcase name="El sistema muestra los datos requeridos" classname="Crear una reserva." time="7.343"/>
-  <testcase name="El usuario ingresa los datos requeridos correctamente." classname="Crear una reserva." time="3.86"/>
-  <testcase name="El usuario ingresa los datos requeridos incorrectamente." classname="Crear una reserva." time="1.644"/>
+  <testcase name="El sistema muestra los datos requeridos" classname="Crear una reserva." time="7.999"/>
+  <testcase name="El usuario ingresa los datos requeridos correctamente." classname="Crear una reserva." time="4.841"/>
+  <testcase name="El usuario ingresa los datos requeridos incorrectamente." classname="Crear una reserva." time="1.697"/>
+  <testcase name="El usuario puede crear una reserva exitosamente" classname="Crear una reserva." time="4.193"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[may. 26, 2024 12:00:47 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[may. 26, 2024 1:49:07 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 125
-may. 26, 2024 12:00:47 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+may. 26, 2024 1:49:07 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 125.0.6422.112. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>
