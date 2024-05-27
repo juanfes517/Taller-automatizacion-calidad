@@ -12,4 +12,17 @@ public class Constants {
     public static final String MSJ_SUCCESSFUL = "Se ha registrado con exito la reserva.";
     public static final String MSJ_NO_CONTACT = "No olvide completar los datos de contacto del contacto de emergencia.";
 
+    public static final String NAME_1 = "Felipe";
+    public static final String NAME_2 = "Juan";
+    public static final String NAME_3 = "Daniela";
+
+    public static final String LAST_NAME_1 = "Escobar";
+    public static final String LAST_NAME_2 = "Rendon";
+
+    public static final String EMAIL_1 = "Felipe@udea.edu.co";
+    public static final String EMAIL_2 = "juan@udea.edu.co";
+
+
+    public static final String PHONE = "123456789";
+    public static final String ADDRESS = "Medellin, Colombia";
 }
