@@ -1,8 +1,12 @@
 package co.com.udea.booking.stepdefinitions.addPassenger;
 
+import co.com.udea.booking.questions.ValidationBookingSuccessful;
 import co.com.udea.booking.questions.ValidationNoEmergencyContact;
 import co.com.udea.booking.tasks.OpenUrl;
+import co.com.udea.booking.tasks.bookingSuccessful.ClickConfirm;
+import co.com.udea.booking.tasks.createWithPassenger.FillDataForPassengers;
 import co.com.udea.booking.tasks.noEmergencyContact.FillBasicInfo;
+import co.com.udea.booking.tasks.viewForm.ClickForm;
 import co.com.udea.booking.utils.Constants;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -18,7 +22,7 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
-public class NoEmergencyContactStepDefinition {
+public class CreateWithPassengerStepDefinition {
     //Actor
     private final Actor usuario = Actor.named("usuario");
 
@@ -33,18 +37,28 @@ public class NoEmergencyContactStepDefinition {
         setTheStage(new OnlineCast());
     }
 
-    @Given("un usuario que se encuentra en el formulario de reserva")
+    @Given("Un usuario que esta en la pagina de inicio del modulo de reservas")
     public void estoyEnElSitio(){
-        usuario.attemptsTo(OpenUrl.url(Constants.URL_BOOKING));
+        usuario.attemptsTo(OpenUrl.url(Constants.URL_HOME));
     }
 
-    @When("solo agregue la informacion basica de dos o mas pasajeros")
-    public void aguegarInformacion(){
-        usuario.attemptsTo(FillBasicInfo.inputs());
+    @When("ingrese al formulario de reservas")
+    public void ingresarAlFormulario(){
+        usuario.attemptsTo(ClickForm.button());
     }
 
-    @Then("puede ver un mensaje de error pidiendo la informacion de contacto")
+    @When("ingrese los datos basicos de todos los pasajeros con un contacto de emergencia")
+    public void ingresarUnContactoEmergencia(){
+        usuario.attemptsTo(FillDataForPassengers.inputs());
+    }
+
+    @When("confirme la reserva")
+    public void confirmarReserva(){
+        usuario.attemptsTo(ClickConfirm.buttonConfirm());
+    }
+
+    @Then("puede ver un mensaje de creacion exitosa")
     public void puedoVerMensajeError(){
-        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationNoEmergencyContact.noContact(), Matchers.containsString(Constants.MSJ_NO_CONTACT)));
+        GivenWhenThen.then(usuario).should(GivenWhenThen.seeThat(ValidationBookingSuccessful.message(), Matchers.containsString(Constants.MSJ_SUCCESSFUL)));
     }
 }

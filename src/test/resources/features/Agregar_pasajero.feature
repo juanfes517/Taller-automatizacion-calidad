@@ -12,3 +12,10 @@ Feature: Agregar pasajero.
     Given un usuario que se encuentra en el formulario de reserva
     When solo agregue la informacion basica de dos o mas pasajeros
     Then puede ver un mensaje de error pidiendo la informacion de contacto
+
+  Scenario: Crear un reserva exitosamente con pasajeros
+    Given Un usuario que esta en la pagina de inicio del modulo de reservas
+    When ingrese al formulario de reservas
+    And ingrese los datos basicos de todos los pasajeros con un contacto de emergencia
+    And confirme la reserva
+    Then puede ver un mensaje de creacion exitosa
