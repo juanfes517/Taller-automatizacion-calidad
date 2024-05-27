@@ -1,6 +1,5 @@
 package co.com.udea.booking.interactions.formDataError;
 
-import co.com.udea.booking.interactions.formDataValid.EnterAllData;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;

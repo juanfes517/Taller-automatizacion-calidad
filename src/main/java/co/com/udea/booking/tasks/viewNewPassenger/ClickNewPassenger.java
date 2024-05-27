@@ -1,7 +1,6 @@
 package co.com.udea.booking.tasks.viewNewPassenger;
 
 import co.com.udea.booking.interactions.viewNewPassenger.OpenNewPassenger;
-import co.com.udea.booking.tasks.viewForm.ClickForm;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

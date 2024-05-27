@@ -1,6 +1,5 @@
 package co.com.udea.booking.stepdefinitions.addPassenger;
 
-import co.com.udea.booking.questions.ValidationViewForm;
 import co.com.udea.booking.questions.ValidationViewNewPassenger;
 import co.com.udea.booking.tasks.OpenUrl;
 import co.com.udea.booking.tasks.viewNewPassenger.ClickNewPassenger;

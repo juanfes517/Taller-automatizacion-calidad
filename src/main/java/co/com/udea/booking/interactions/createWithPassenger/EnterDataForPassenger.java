@@ -1,6 +1,5 @@
 package co.com.udea.booking.interactions.createWithPassenger;
 
-import co.com.udea.booking.interactions.noEmergencyContact.EnterBasicData;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
