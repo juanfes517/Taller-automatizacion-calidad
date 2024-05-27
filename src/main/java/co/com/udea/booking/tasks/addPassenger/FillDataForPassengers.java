@@ -1,6 +1,6 @@
-package co.com.udea.booking.tasks.createWithPassenger;
+package co.com.udea.booking.tasks.addPassenger;
 
-import co.com.udea.booking.interactions.createWithPassenger.EnterDataForPassenger;
+import co.com.udea.booking.interactions.addPassenger.EnterDataForPassenger;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

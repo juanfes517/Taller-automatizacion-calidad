@@ -1,4 +1,4 @@
-package co.com.udea.booking.interactions.bookingSuccessful;
+package co.com.udea.booking.interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

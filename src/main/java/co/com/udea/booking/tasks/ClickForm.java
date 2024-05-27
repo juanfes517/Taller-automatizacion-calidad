@@ -1,10 +1,10 @@
-package co.com.udea.booking.tasks.viewForm;
+package co.com.udea.booking.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 
-import co.com.udea.booking.interactions.viewForm.OpenForm;
+import co.com.udea.booking.interactions.OpenForm;
 
 public class ClickForm implements Task {
     @Override

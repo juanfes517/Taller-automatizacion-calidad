@@ -1,7 +1,7 @@
 package co.com.udea.booking.stepdefinitions.createBooking;
 
-import co.com.udea.booking.questions.ValidationFormDataValid;
-import co.com.udea.booking.tasks.formDataValid.FillAllFormData;
+import co.com.udea.booking.questions.createBooking.ValidationFormDataValid;
+import co.com.udea.booking.tasks.createBooking.FillAllFormData;
 import co.com.udea.booking.tasks.OpenUrl;
 import co.com.udea.booking.utils.Constants;
 import io.cucumber.java.Before;

@@ -1,6 +1,6 @@
-package co.com.udea.booking.tasks.formDataValid;
+package co.com.udea.booking.tasks.createBooking;
 
-import co.com.udea.booking.interactions.formDataValid.EnterAllData;
+import co.com.udea.booking.interactions.createBooking.EnterAllData;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

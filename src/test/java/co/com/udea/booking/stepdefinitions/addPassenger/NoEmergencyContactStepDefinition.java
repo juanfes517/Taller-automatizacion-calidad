@@ -1,8 +1,8 @@
 package co.com.udea.booking.stepdefinitions.addPassenger;
 
-import co.com.udea.booking.questions.ValidationNoEmergencyContact;
+import co.com.udea.booking.questions.addPassenger.ValidationNoEmergencyContact;
 import co.com.udea.booking.tasks.OpenUrl;
-import co.com.udea.booking.tasks.noEmergencyContact.FillBasicInfo;
+import co.com.udea.booking.tasks.addPassenger.FillBasicInfo;
 import co.com.udea.booking.utils.Constants;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;

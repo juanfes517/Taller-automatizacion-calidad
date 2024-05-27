@@ -1,4 +1,4 @@
-package co.com.udea.booking.questions;
+package co.com.udea.booking.questions.addPassenger;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;

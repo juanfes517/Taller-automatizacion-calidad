@@ -1,8 +1,8 @@
 package co.com.udea.booking.stepdefinitions.addPassenger;
 
-import co.com.udea.booking.questions.ValidationViewNewPassenger;
+import co.com.udea.booking.questions.addPassenger.ValidationViewNewPassenger;
 import co.com.udea.booking.tasks.OpenUrl;
-import co.com.udea.booking.tasks.viewNewPassenger.ClickNewPassenger;
+import co.com.udea.booking.tasks.addPassenger.ClickNewPassenger;
 import co.com.udea.booking.utils.Constants;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;

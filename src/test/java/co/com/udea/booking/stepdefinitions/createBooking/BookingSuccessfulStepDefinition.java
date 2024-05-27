@@ -2,9 +2,9 @@ package co.com.udea.booking.stepdefinitions.createBooking;
 
 import co.com.udea.booking.questions.ValidationBookingSuccessful;
 import co.com.udea.booking.tasks.OpenUrl;
-import co.com.udea.booking.tasks.bookingSuccessful.ClickConfirm;
-import co.com.udea.booking.tasks.formDataValid.FillAllFormData;
-import co.com.udea.booking.tasks.viewForm.ClickForm;
+import co.com.udea.booking.tasks.ClickConfirm;
+import co.com.udea.booking.tasks.createBooking.FillAllFormData;
+import co.com.udea.booking.tasks.ClickForm;
 import co.com.udea.booking.utils.Constants;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;

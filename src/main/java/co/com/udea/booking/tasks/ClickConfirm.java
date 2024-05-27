@@ -1,10 +1,10 @@
-package co.com.udea.booking.tasks.bookingSuccessful;
+package co.com.udea.booking.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 
-import co.com.udea.booking.interactions.bookingSuccessful.ConfirmForm;
+import co.com.udea.booking.interactions.ConfirmForm;
 
 public class ClickConfirm implements Task {
     @Override
