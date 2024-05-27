@@ -5,7 +5,7 @@ Feature: Crear una reserva.
 
   Scenario: El sistema muestra los datos requeridos
     Given un usuario que se encuentra en la pagina de inicio del modulo de reservas
-    When presione el boton relizar reserva
+    When ingrese a realizar una reserva
     Then puede visualizar un formulario con todos los datos requeridos.
 
   Scenario: El usuario ingresa los datos requeridos correctamente.

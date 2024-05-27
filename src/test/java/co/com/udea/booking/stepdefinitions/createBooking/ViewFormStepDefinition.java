@@ -39,7 +39,7 @@ public class ViewFormStepDefinition {
         usuario.attemptsTo(OpenUrl.url(Constants.URL_HOME));
     }
 
-    @When("presione el boton relizar reserva")
+    @When("ingrese a realizar una reserva")
     public void clickEnReservar(){
         usuario.attemptsTo(ClickForm.button());
     }
